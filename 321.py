@@ -16,7 +16,7 @@ for i in url_array:
   nowTime = int(time.time())
   struct_time = time.localtime(nowTime)
   timeString = time.strftime("%Y-%m-%d-%I:%M:%S-%P", struct_time)
-  respone = json.loads(ur.urlopen("https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/"+i+"?apikey="+apiurl2).read().decode('utf-8'))
+  respone = json.loads(ur.urlopen("https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/"+i+"?apikey="+apiurl2+"&language=zh-TW&details=false&metric=false").read().decode('utf-8'))
   doc_ref = db.collection("homework").document("student02").collection("test02")
   doc_ref.document('Taiwan-W-'+i+"-"+timeString).set({'weather':respone})
 
