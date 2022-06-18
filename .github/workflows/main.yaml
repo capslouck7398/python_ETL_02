@@ -4,8 +4,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 */1 * * *'
-
+    - cron: '0 */2 * * *'
 jobs:
   my-job:
     name: My Job
