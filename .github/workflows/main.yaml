@@ -5,6 +5,7 @@ on:
       - main
   schedule:
     - cron: '0 13 * * *'
+    - corn: '0 1 * * *'
 jobs:
   my-job:
     name: My Job
